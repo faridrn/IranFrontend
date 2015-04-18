@@ -36,7 +36,10 @@
 								</nav>
 							</div>
 							<div class="header-tools pull-right">
-								Login / Register | Search
+								<ul class="list-unstyled list-inline">
+									<li class="user" title="Login / Register"><a href="#"><i class="icon-user"></i> Login</a></li>
+									<li class="search" title="Search"><a href="#" tabindex="0" data-toggle="popover" data-placement="bottom"><i class="icon-search"></i></a></li>
+								</ul>
 							</div>
 						</div>
 					</div>
@@ -201,7 +204,17 @@
 				</div>
 			</div>
 		</footer>
+		<div class="hide">
+			<div id="search-form">
+				<form action="#">
+					<div class="form-group">
+						<input type="text" name="q" class="form-control" />
+					</div>
+				</form>
+			</div>
+		</div>
 		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
 		<script src="js/iran.min.js"></script>
 	</body>
 </html>

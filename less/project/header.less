@@ -1,6 +1,10 @@
 #header {
     position: relative; box-shadow: 0 0 3px #989898; z-index: 80;
-    a { transition: all 0.2s; }
+    a {
+	transition: all 0.2s; text-decoration: none;
+	&:link, &:active, &:visited { color: @green; }
+	&:focus { outline: 0 none; }
+    }
     .brand {
 	.logo {
 	    margin: 5px 0;
@@ -9,14 +13,27 @@
 	    }
 	}
     }
+    .header-tools {
+	ul {
+	    li {
+		font-size: 16px; padding: 0;
+		a {
+		    display: block; line-height: @headerHeight; padding: 0 15px;
+		    &:hover { color: darken(@green, 10%); }
+		}
+		& ~ li { margin-left: 20px; }
+	    }
+	}
+    }
 }
 #menu {
     margin-left: 60px;
     ul {
 	li {
-	    line-height: 80px; padding: 0 10px; font-size: 18px;
+	    padding: 0 10px; font-size: 18px;
 	    a {
-		color: @gray; text-decoration: none;
+		display: block; line-height: @headerHeight; 
+		&:link, &:active, &:visited { color: @gray; }
 		&:hover { color: @green; }
 	    }
 	    &.active {
