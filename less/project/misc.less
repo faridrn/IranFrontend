@@ -2,6 +2,9 @@
 ::-moz-selection { background: @green; color: #fff; text-shadow: none; }
 ::selection { background: @green; color: #fff; text-shadow: none; }
 body { /*text-align: right;*/ font-family: @fontFamily; background: @pageBackground; }
+a {
+    &, &:hover, &:link, &:active, &:visited, &:focus { outline: 0 none; }
+}
 /*.container { direction: rtl; }*/
 .img {
     display: block; width: 100%;
@@ -21,6 +24,7 @@ a {
 ._margin-top {  margin-top: @marginTopdefault; }
 ._margin-bottom {  margin-bottom: @marginBottomDefault; }
 
+// Forms bugfix
 .form-control { min-height: 0; line-height: @line-height-base; text-align: left; color: @text-color; }
 
 /* Icons */

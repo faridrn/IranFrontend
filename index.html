@@ -10,7 +10,7 @@
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="css/style.css" />
-		<!--[if lt IE 10]><script src="js/modernizr-2.6.2.min.js"></script><![endif]-->
+		<script src="js/modernizr-2.6.2.min.js"></script>
 	</head>
 	<body>
 		<header id="header">
@@ -37,7 +37,7 @@
 							</div>
 							<div class="header-tools pull-right">
 								<ul class="list-unstyled list-inline">
-									<li class="user" title="Login / Register"><a href="#"><i class="icon-user"></i> Login</a></li>
+									<li class="user" title="Login / Register"><a href="#" tabindex="0" data-toggle="modal" data-target="#user-form"><i class="icon-user"></i> Login</a></li>
 									<li class="search" title="Search"><a href="#" tabindex="0" data-toggle="popover" data-placement="bottom"><i class="icon-search"></i></a></li>
 								</ul>
 							</div>
@@ -204,15 +204,64 @@
 				</div>
 			</div>
 		</footer>
-		<div class="hide">
+		<div class="hide popover-contents">
 			<div id="search-form">
 				<div id="search-form-inner">
-					<form action="#">
+					<form action="#" method="get">
 						<div class="form-group">
 							<input type="text" name="q" class="form-control" placeholder="Search..." />
 							<button type="submit" class="_transparent"><i class="icon-search"></i></button>
 						</div>
 					</form>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade zoom-out" id="user-form" tabindex="-1" role="dialog" aria-labelledby="Login / Register" aria-hidden="true">
+			<div class="modal-dialog">
+				<div id="user-form-inner" class="modal-content" role="tabpanel">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<ul class="nav nav-tabs" role="tablist">
+							<li role="presentation" class="active"><a href="#user-login" aria-controls="user-login" role="tab" data-toggle="tab"><i class="icon-user"></i>&nbsp;Login</a></li>
+							<li role="presentation"><a href="#user-register" aria-controls="user-register" role="tab" data-toggle="tab"><i class="icon-register"></i>&nbsp;Register</a></li>
+						</ul>
+					</div>
+					<div class="modal-body">
+						<div class="tab-content">
+							<div role="tabpanel" class="tab-pane fade in active" id="user-login">
+								<form action="#" method="post">
+									<div class="form-group">
+										<input type="text" name="username" class="form-control" placeholder="Username" />
+									</div>
+									<div class="form-group">
+										<input type="password" name="password" class="form-control" placeholder="Password" />
+									</div>
+									<div class="form-group text-center">
+										<button type="submit" class="btn btn-success">Login</button>
+									</div>
+								</form>
+							</div>
+							<div role="tabpanel" class="tab-pane" id="user-register">
+								<form action="#" method="post">
+									<div class="form-group">
+										<input type="text" name="username" class="form-control" placeholder="Name" />
+									</div>
+									<div class="form-group">
+										<input type="text" name="username" class="form-control" placeholder="Username" />
+									</div>
+									<div class="form-group">
+										<input type="email" name="email" class="form-control" placeholder="Email" />
+									</div>
+									<div class="form-group">
+										<input type="password" name="password" class="form-control" placeholder="Password" />
+									</div>
+									<div class="form-group text-center">
+										<button type="submit" class="btn btn-success">Register</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
