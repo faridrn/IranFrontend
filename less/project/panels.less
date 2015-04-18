@@ -51,4 +51,32 @@
 	    }
 	}
     }
+    
+    &.showcase {
+	margin: @grid-gutter-width 0;
+	ul {
+	    li {
+		position: relative;
+		figure {
+		    & > a, & > img {
+			display: block;
+		    }
+		    figcaption {
+			width: 60%; margin-left: 5%; position: absolute; bottom: 10%; left: 0; background: rgba(0, 0, 0, 0.7); 
+			h3 {
+			    margin: 0;
+			    a {
+				display: block; color: #fff; text-decoration: none; padding: 20px;
+				span {
+				    display: block;
+				    &.title { margin-bottom: 10px; }
+				    &.desc { font-size: 14px; }
+				}
+			    }
+			}
+		    }
+		}
+	    }
+	}
+    }
 }
