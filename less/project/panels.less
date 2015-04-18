@@ -16,7 +16,6 @@
     .img {
 	& > a { display: block; width: 100%; }
     }
-    
     // Panel Types
     &.tiles {
 	margin-bottom: 0;
@@ -52,7 +51,6 @@
 	    }
 	}
     }
-    
     &.showcase {
 	margin: @grid-gutter-width 0;
 	ul {
@@ -77,6 +75,41 @@
 			}
 		    }
 		}
+	    }
+	}
+    }
+    &.blogs {
+	.item {
+	    .dl-horizontal {
+		dt {
+		    width: 120px;
+		}
+		dd {
+		    margin-left: 120px;
+		}
+	    }
+	    .user {
+		text-align: center;
+		& > a {
+		    display: block; color: @white;
+		    span {
+			display: block;
+			&.img { width: 80px; height: 80px; background: tomato; margin: 10px auto; border-radius: 100px; overflow: hidden; }
+			&.name { font-weight: normal; }
+		    }
+		}
+	    }
+	    .content {
+		position: relative;
+		.popover {
+		    position: relative;
+		    & > .arrow { top: 20%; }
+		}
+		h3 {
+		    margin-top: 5px; font-size: 18px;
+		    a { color: @green; }
+		}
+		p { font-size: 13px; }
 	    }
 	}
     }

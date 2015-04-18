@@ -1,3 +1,8 @@
 #mainbody {
-    & > .wrapper { padding-top: @grid-gutter-width; }
+    & > .wrapper {
+	padding-top: @grid-gutter-width; position: relative;
+	&:last-child {
+	    box-shadow: 0 2px 3px #989898;
+	}
+    }
 }
