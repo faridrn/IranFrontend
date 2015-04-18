@@ -12,4 +12,17 @@ $(function () {
     $(document).on('blur', '.popover', function () {
 	$(this).popover('hide');
     });
+    
+    // Carousel
+    $(".panel.showcase ul.items").owlCarousel({
+	items: 1
+	, loop: true
+	, autoplay: true
+	, autoplayTimeout: 3000
+	, autoplayHoverPause: true
+	, singleItem : true
+	, autoHeight : true
+	, animateOut: 'slideOutDown'
+	, animateIn: 'flipInX'
+    });
 });
