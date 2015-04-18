@@ -1,6 +1,6 @@
 /* Misc Rules */
-::-moz-selection { background: #5af; color: #fff; text-shadow: none; }
-::selection { background: #5af; color: #fff; text-shadow: none; }
+::-moz-selection { background: @green; color: #fff; text-shadow: none; }
+::selection { background: @green; color: #fff; text-shadow: none; }
 body { /*text-align: right;*/ font-family: @fontFamily; background: @pageBackground; }
 /*.container { direction: rtl; }*/
 .img {
@@ -20,6 +20,8 @@ a {
 }
 ._margin-top {  margin-top: @marginTopdefault; }
 ._margin-bottom {  margin-bottom: @marginBottomDefault; }
+
+.form-control { min-height: 0; line-height: @line-height-base; text-align: left; color: @text-color; }
 
 /* Icons */
 .icon { display: block; width: 60px; height: 60px; background: tomato; margin: 0 auto; line-height: 60px; text-align: center; color: #fff; border-radius: 50%; font-size: 24px; }
