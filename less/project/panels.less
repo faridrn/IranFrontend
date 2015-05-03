@@ -151,4 +151,33 @@
 	    }
 	}
     }
+    &.itemlist {
+	ul {
+	    li {
+		height: 79px; overflow: hidden; margin-bottom: (@grid-gutter-width / 2);
+		figure {
+		    &.video {
+			& > a, & > img {
+			    position: relative;
+			    &:after { display: block; content: '\e811'; position: absolute; bottom: 0; right: 0; width: 30px; height: 30px; background: rgba(0, 0, 0, 0.8); line-height: 30px; text-align: center; color: @white; font-family: "iran"; opacity: 0.7; }
+			}
+		    }
+		    & > a, & > img { display: block; width: 140px; float: left; }
+		    & > a {
+			& > img { display: block; }
+		    }
+		    figcaption {
+			display: block; margin-left: (140 + (@grid-gutter-width / 3));
+			& > a {
+			    display: block; font-size: 16px;
+			    span {
+				display: block;
+				&.desc { font-size: 14px; color: lighten(@text-color, 40%); }
+			    }
+			}
+		    }
+		}
+	    }
+	}
+    }
 }
