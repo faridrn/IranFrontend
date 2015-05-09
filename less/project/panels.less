@@ -179,5 +179,32 @@
 		}
 	    }
 	}
+	&.page {
+	    ul {
+		padding: 0; margin: 0;
+		li {
+		    height: 113px; background: @grayLight; padding: 0; transition: all 0.25s;
+		    &:hover { box-shadow: 0 0 3px @gray; background: lighten(@grayLight, 3%); }
+		    figure {
+			height: 100%;
+			& > a, & > img { width: 200px; }
+			figcaption {
+			    margin-left: (200 + (@grid-gutter-width / 2)); position: relative; height: 100%;
+			    & > a {
+				height: 100%; padding-top: 6px; position: absolute; width: 100%; left: 0; top: 0;
+				&:hover { text-decoration: none; }
+				span {
+				    &.title { font-size: 20px; color: @green; margin-bottom: 4px; }
+				    &.desc { color: lighten(@text-color, 20%); }
+				}
+				&:hover {
+				    span.title { color: darken(@green, 5%); }
+				}
+			    }
+			}
+		    }
+		}
+	    }
+	}
     }
 }
